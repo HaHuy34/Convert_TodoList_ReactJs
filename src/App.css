@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Raleway", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 410px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.todo-wrapper {
+  /* display: flex;
   align-items: center;
+  justify-content: space-between; */
+  margin-top: 30px;
+}
+
+.list-work-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#work-title {
+  height: 30px;
+  width: 320px;
+  border: 1px solid #c3c3c3;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+#work-title::placeholder {
+  font-size: 15px;
+  color: #c3c3c3;
+}
+
+.list-job {
+  margin-top: 20px;
+}
+
+.add-job {
+  height: 42px;
+  width: 110px;
+  background-color: rgb(236, 8, 8);
+  border-radius: 5px;
+  color: #ffff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-job:hover {
+  background-color: rgb(89, 89, 89);
+}
+
+.bx-trash,
+i.bx.bx-check,
+i.bx.bx-edit {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #c3c3c3;
+  color: #000;
+  font-size: 21px;
+  cursor: pointer;
+  border: 1px solid #c3c3c3;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.priority {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #c3c3c3;
+  color: #000;
+  font-size: 21px;
+  cursor: pointer;
+  border: 1px solid #c3c3c3;
+  transition: all 0.3s;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bx-trash:hover,
+i.bx.bx-check:hover,
+i.bx.bx-edit:hover {
+  border: 1px solid red;
+  scale: 1.1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bxs-chevrons-down,
+.bxs-chevrons-up {
+  display: flex;
+  align-items: center;
+  border: 1px solid #c3c3c3;
+}
+
+.bxs-chevrons-up:hover,
+.bxs-chevrons-down:hover {
+  height: 100%;
+  border: 1px solid red;
+  scale: 1.1;
+}
+
+ul li {
+  color: rgb(133, 131, 129);
+  margin: 10px 0;
+  list-style: none;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.main-icons-title {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: space-between;
+  order: 4;
+  gap: 10px;
+}
+
+.check-done {
+  cursor: pointer;
+  color: #f3eded;
+}
+
+.check-icons {
+  text-decoration: none;
+}
+
+.color {
+  color: rgb(133, 131, 129);
+}
+
+.dragging {
+  opacity: 0.6;
+}
+
+.delete-all {
+  padding: 5px 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  float: right;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.delete-all:hover {
+  border: 1px solid #000;
+  color: #ffff;
+  background-color: #000;
 }
